@@ -23,8 +23,3 @@ class Bus:
         for passenger in bus_stop.queue:
             self.passengers.append(passenger)
         bus_stop.clear()
-        
-
-    
-
-    

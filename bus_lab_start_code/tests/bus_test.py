@@ -6,6 +6,7 @@ from src.person import Person
 class TestBus(unittest.TestCase):
     def setUp(self):
         self.bus = Bus(22, "Ocean Terminal")
+        self.bus_stop = BusStop("Stop 1")
 
     # @unittest.skip("Delete this line to run the test")
     def test_has_route_number(self):
@@ -54,3 +55,5 @@ class TestBus(unittest.TestCase):
         bus_stop.add_to_queue(person_2)
         self.bus.pick_up_from_stop(bus_stop)
         self.assertEqual(2, self.bus.passenger_count())
+        self.assertEqual(0, self.bus_stop.queue_length())
+        
